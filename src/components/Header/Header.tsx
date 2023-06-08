@@ -7,7 +7,17 @@ export function Header() {
     <AppBar position='static' color='transparent' sx={{ paddingX: 2 }}>
       <Toolbar disableGutters>
         <Box flexGrow={1} display="flex">
-          <img src={devieraLogo} alt="Deviera Logo" width={148} />
+          <Button
+            component={Link}
+            to={'/'}
+            sx={{
+              padding: 0,
+              "&.MuiButtonBase-root:hover": {
+                bgcolor: "transparent"
+              }
+            }}>
+            <img src={devieraLogo} alt="Deviera Logo" width={148} />
+          </Button>
         </Box>
 
         <Button component={Link} to={'/sign-in'} color="inherit">Login</Button>
